@@ -1,4 +1,4 @@
-# Recipe Vector Search (Next.js + MongoDB Atlas)
+# Magic Recipe Vector Search 
 
 This app is a minimal Next.js front end that queries a **MongoDB Atlas Vector Search** index over recipe documents.
 
@@ -47,7 +47,7 @@ In Atlas, create a **Vector Search** index on your recipes collection similar to
     {
       "type": "vector",
       "path": "embedding",
-      "numDimensions": 768,
+      "numDimensions": 384,
       "similarity": "cosine"
     }
   ]
