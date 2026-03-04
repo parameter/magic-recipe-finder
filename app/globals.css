@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 720px;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.search-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.85);
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.search-input::placeholder {
+  color: #6b7280;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.3);
+}
+
+.search-button {
+  padding: 0.75rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 1.25rem;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.recipe {
+  padding: 0.9rem 1rem;
+  border-radius: 0.9rem;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.recipe-name {
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+.recipe-score {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.recipe-meta {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-bottom: 0.25rem;
+}
+
+.recipe-description {
+  font-size: 0.82rem;
+  color: #d1d5db;
+}
+
+.error {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: #fecaca;
+}
+
+.empty-state {
+  margin-top: 0.5rem;
+  font-size: 0.86rem;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .search-row {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+    text-align: center;
+  }
+}
